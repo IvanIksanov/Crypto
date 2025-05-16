@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Два чата на одной странице</title>
+    <!-- убедитесь, что путь к style.css правильный -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Шифрованный чат: A ↔ B</h1>
+
+<!-- общий лог -->
+<div class="log-shared">
+    <h3>Общий лог:</h3>
+    <ul id="logShared"></ul>
+</div>
+
+<!-- контейнер двух чатов -->
+<div class="chat-wrapper">
+    <!-- чат A -->
+    <div class="chat-block">
+        <h2>Пользователь A (Системный аналитик)</h2>
+        <div class="messages" id="chatA-messages"></div>
+        <div class="input-row">
+            <textarea id="inputA" placeholder="Введите сообщение..."></textarea>
+            <button onclick="sendMessageA()">Отправить</button>
+        </div>
+    </div>
+
+    <!-- вертикальная разделительная линия -->
+    <div class="vertical-divider"></div>
+
+    <!-- чат B -->
+    <div class="chat-block">
+        <h2>Пользователь B (Разработчик)</h2>
+        <div class="messages" id="chatB-messages"></div>
+        <div class="input-row">
+            <textarea id="inputB" placeholder="Введите сообщение..."></textarea>
+            <button onclick="sendMessageB()">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

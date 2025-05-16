@@ -1,0 +1,135 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f0f2f5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.log-shared {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.log-shared h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.log-shared ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 13px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.log-shared li {
+  background: #eef1f4;
+  margin: 4px 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.chat-wrapper {
+  display: flex;
+  /* фиксируем высоту контейнера чатов */
+  height: calc(100vh - 160px);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.chat-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.chat-block h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* вот он — вертикальный разделитель */
+.vertical-divider {
+  width: 2px;
+  background-color: #ccc;
+  /* растянуть на всю доступную высоту родителя */
+  height: 100%;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 5px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.message.right {
+  align-self: flex-end;
+  background-color: #cce5ff;
+  text-align: right;
+}
+
+.message.left {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+textarea {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 60px;
+}
+
+button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #0056b3;
+}
